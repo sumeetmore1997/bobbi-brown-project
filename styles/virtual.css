@@ -1,0 +1,46 @@
+body{
+    font-family: sans-serif;
+}
+#virtual{
+    display: flex;
+    width: 94%;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#virtual>div{
+    width: 30%;
+    cursor: pointer;
+}
+#virtual-img{
+    width: 450px;
+}
+#virtual-head{
+    font-size: 30px;
+    font-weight: 500;
+}
+#virtual-book{
+    font-size: 12px;
+    color: black;
+}
+#virtual-book:hover{
+    color: red;
+}
+#virtual-1{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-top: 50px;
+    height: 200px;
+}
+#v1-h3{
+    font-size: 15px;
+    margin-bottom: -30px;
+}
+#v1-h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: -10px;
+}

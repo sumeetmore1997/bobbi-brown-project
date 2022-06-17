@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/offers.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <h1 id="offer-head">TODAY'S OFFER</h1>
+    <img id="offer-img" src="https://www.bobbibrown.in/media/export/cms/40548/Acn_BB_Desktop_Offer_1920x667-1.jpg" alt="">
+    <h1 id="offer-head">EVERYDAY OFFERS & SERVICES</h1>
+    <div id="offer-div">
+        <div>
+            <img id="offer-div-img" src="https://www.bobbibrown.in/media/export/cms/offers/MPP-Category-Header-Mobile_2x_660x372.jpg" alt="">
+            <h3 id="offer-name">10% OFF ON YOUR FIRST ORDER</h3>
+            <span>Valid only on the first onlin order, excluding products from sale items and kits.
+                <br>
+                *Additionally avail the sample on every purchase
+            </span>
+            <br>
+            <br>
+            <a id="offer-shop" href="">SHOP NOW</a>
+        </div>
+        <div>
+            <img id="offer-div-img" src="https://www.bobbibrown.in/media/export/cms/offers/gnav_offers_3_660x372.jpg" alt="">
+            <h3 id="offer-name">FREE SAMPLES</h3>
+            <span>Choose from the assortment at checkout, no offer code needed.
+                <br>
+                Only one sample can be selected per order.
+            </span>
+            <br>
+            <br>
+            <a id="offer-shop" href="">SHOP NOW</a>
+        </div>
+        <div>
+            <img id="offer-div-img" src="https://www.bobbibrown.in/media/export/cms/offers/BB_FriendsFamily_Jan_Gnav_660x372.jpg" alt="">
+            <h3 id="offer-name">FREE SHIPPING & RETUNRS</h3>
+            <span>Get free Standard Shipping on every order. No offer code necessary.
+                <br>
+                See SHIPPING INFO for more details.
+                <br>
+                Also, return your order for free!
+            </span>
+            <br>
+            <br>
+            <a id="offer-shop" href="">GET SHOPPING!</a>
+        </div>
+        <div>
+            <img id="offer-div-img" src="https://www.bobbibrown.in/media/export/cms/offers/bb_model_660x372.jpg" alt="">
+            <h3 id="offer-name">LIVE CHAT</h3>
+            <span>Chat for expert advice or book a virtual consulation with the Bobbi Brown Cosmetics Team through live chat!
+                <br>
+                Monday – Sunday: 8 AM to 10 PM IST
+            </span>
+            <br>
+            <br>
+            <a id="offer-shop" href="">LETS CHAT</a>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "./scripts/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+</script>

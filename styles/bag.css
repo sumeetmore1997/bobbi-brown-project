@@ -1,0 +1,37 @@
+#remove_product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    margin-bottom: 50px;
+    width: 65%;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+button{
+    height: 30px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(47, 47, 47);
+}
+ #main-bag{
+    display: flex;
+    margin-top: 50px;
+ }
+ #total_amount1{
+    /* border: 1px solid teal; */
+    height: 200px;
+    width: 35%;
+    text-align: center;
+ }
+ #total_amount{
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    margin-bottom: 30px;
+ }

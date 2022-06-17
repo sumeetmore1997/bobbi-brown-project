@@ -1,0 +1,33 @@
+body{
+    font-family: sans-serif;
+}
+#offer-head{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 500;
+    word-spacing: 10px;
+}
+#offer-div{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    width: 94%;
+}
+#offer-img{
+    width: 100%;
+    margin: auto;
+}
+#offer-div>div{
+    width: 22%;
+}
+#offer-div-img{
+    width: 330px;
+}
+#offer-name{
+    font-size: 35px;
+    font-weight: 500;
+}
+#offer-shop{
+    color: rgb(93, 93, 93);
+}

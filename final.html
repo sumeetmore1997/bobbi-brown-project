@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/final.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="bardiv">
+        <p id="pp">Your order has been placed successfully!</p>
+        <div id="divforimg">
+            <img id="iiimg" src="https://images.bewakoof.com/web/discounts-and-offers-1605624171.gif" alt="">
+            <h4 id="hh4">Thank You for shopping with us</h4>
+        </div>
+
+    </div>
+
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "./scripts/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+</script>

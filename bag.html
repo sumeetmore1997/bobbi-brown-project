@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/bag.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="main-bag">
+    <div id="remove_product"></div>
+    <div id="total_amount1">
+        TOTAL AMOUNT RS.:-
+        <div id="total_amount"></div>
+        <button  > <a href="payment.html"  style="color:white;text-decoration: none;">  PROCEED TO BUY </a></button>
+    </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "./scripts/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+
+    let bagData= JSON.parse(localStorage.getItem("product"))
+console.log(bagData)
+
+let total = bagData.reduce(function(sum,ele,index,arr){
+    return sum + Number(ele.price);
+},0)
+document.querySelector("#total_amount").innerText=`${total}`
+
+bagData.map(function (ele,index){
+
+    let div = document.createElement("div")
+    div.setAttribute("id","products")
+    console.log(ele)
+
+    let img = document.createElement("img");
+            img.src = ele.Image;
+    
+            let h2 = document.createElement("h2");
+            h2.innerText = ele.name;
+
+            let rating = document.createElement("p")
+            rating.innerText = "★★★☆☆(95)";
+    
+            let p = document.createElement("p");
+            p.innerText = ele.tag;
+
+            let price = document.createElement("p");
+            price.innerText = ele.price;
+
+            let btn = document.createElement("button")
+            btn.innerText = "REMOVE";
+            btn.addEventListener("click", function(){
+                removeProduct(ele,index)
+            })
+    div.append(img, h2, rating, p, price, btn)
+
+    document.querySelector("#remove_product").append(div)
+})
+
+function removeProduct(ele,index){
+    console.log(ele.index)
+    bagData.splice(index,1)
+    console.log(bagData);
+    localStorage.setItem("product",JSON.stringify(bagData));
+    window.location.reload();
+}
+</script>

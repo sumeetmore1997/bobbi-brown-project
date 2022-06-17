@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div>
+        
+        <div id="logindiv">
+  
+          <h2> LOG-IN PAGE</h2>
+      
+          <form>
+            <input id="emailb"  type="text" placeholder="Email address" style="height: 30px;width: 50%" />
+            <br>
+            <br>
+            
+            <input id="passb" type="password" placeholder=" Password"  style="height: 30px;width: 50%"/>
+            <br>
+          <br>
+      
+          <button type="submit" style="background-color:black;color:white;width: 140PX;height: 40PX; cursor: pointer;" >
+      
+           
+              LOG-IN </button>
+            </form>
+      
+          </div>
+      </div>
+
+      <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "./scripts/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+
+
+    document.querySelector("form").addEventListener("submit", logfun);
+
+  var regdUser = JSON.parse(localStorage.getItem("userCreds"));
+
+  function logfun() {
+    event.preventDefault();
+
+    var entemail = document.querySelector("#emailb").value;
+    var entpass = document.querySelector("#passb").value;
+
+    // console.log(mail,pass)
+
+    for (var i = 0; i < regdUser.length; i++) {
+      console.log(regdUser[i]);
+
+      if (regdUser[i].email == entemail && regdUser[i].password == entpass) {
+        alert("LogIn Successfull");
+        window.location.href = "index.html";
+        break;
+      } else {
+        alert("Log In Failed");
+        break;
+      }
+    }
+  }
+</script>

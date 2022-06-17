@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+      <div id="maindivvv">
+    <div id="signdiv">
+    
+
+    <h2>MY ACCOUNT</h2>
+    <hr>
+
+    <h2>SIGN-UP PAGE</h2>
+    <hr>
+
+    <h3> NEW CUSTOMERS</h3>
+    <hr>
+
+
+    <div style="font-size:20px;color: red;width: 50%;" >
+        Please indicate that you accept the Terms and Conditions and Privacy Policy of the BobbiBrown site in order to create an account.
+    </div>
+
+    <br>
+
+    <div style="font-size:20px;color: red;width: 50%;" >
+                
+    Please enter your password.
+    </div>
+    <br>
+    <div style="font-size:20px;color: red;width: 50%;" >
+        Please enter your email address.
+    </div>
+
+    
+    </p>
+    <div>
+        
+        <!-- <div ><a href="signup.html"> SIGNUP </a></div>
+        <div ><a href="login.html"> LOGIN </a></div> -->
+    </div>
+
+    <p>  *Required</p>
+    <form>
+<input id="emailb"  type="text" placeholder="Email address" style="height: 30px;width: 40%" />
+<br>
+<br>
+
+<input id="passb" type="password" placeholder=" Password"  style="height: 30px;width: 40%"/>
+<br>
+<br>
+<input type="checkbox" id="checkbox1"> Show Password</p>
+<br>
+<P style="font-size:15px;color: red">
+<input type="checkbox" id="checkbox2" > *I agree to Bobbi Brown’s Terms and Conditions and Privacy Policy.</p>
+<P style="font-size:15px;color: red"> 
+<input type="checkbox" id="checkbox3" > Yes! I would like to receive the Bobbi Brown Newsletter.</p>
+
+<p style="font-size:15px;color: red">Read The Policy</p>
+<!-- <input type="submit" placeholder="SIGN-UP" style="background-color:black;color:white " /> -->
+<button type="submit" style="background-color:black;color:white;width: 140PX;height: 40PX;">
+    <a href="login.html" style="text-decoration: none; color: white;">
+    REGISTER </a></button>
+
+</form>
+
+</div>
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "./scripts/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+
+
+    document.querySelector("form").addEventListener("submit", signfun)
+
+let userData=JSON.parse(localStorage.getItem("userCreds")) || []
+function signfun()
+{
+    event.preventDefault();
+
+    let userObj={
+        email:document.querySelector("#emailb").value,
+        password:document.querySelector("#passb").value,
+        // username:document.querySelector("#user").value,
+
+    };
+// console.log(userObj)
+userData.push(userObj);
+console.log(userData)
+localStorage.setItem("userCreds",JSON.stringify(userData))
+// window.location.reload()
+}
+
+
+
+
+</script>

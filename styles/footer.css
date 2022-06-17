@@ -1,0 +1,78 @@
+#ft-box{
+    /* border: 1px solid black; */
+    height: 380px;
+    display: flex;
+    background-color: black;
+}
+#ft-div{
+    /* border: 1px solid red; */
+    height: 330px;
+    width: 27%;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: white;
+
+}
+#h2{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#p{
+    font-size: 15px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+#email, #mobile{
+    height: 40px;
+    width: 60%;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding-left: 15px;
+}
+#ft-follow-div{
+    margin-top: 50px;
+}
+#ft-submit{
+    height: 40px;
+    width: 25%;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+#ft-submit:hover{
+    background-color: rgb(32, 30, 30);
+}
+#ft-country{
+    height: 40px;
+    width: 55%;
+    padding-left: 15px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+#i{
+    margin: 0px 20px 0px 0px;
+    cursor: pointer;
+}
+#ft-logo-div{
+    margin-top: 30px;
+}
+#ft-box2{
+    display: flex;
+    padding-top: 30px;
+    height: 160px;
+    border-top: 1px solid white;
+    color: white;
+    background-color: black;
+}
+#ft-side{
+    display: flex;
+    margin-left: 150px;
+}
+#ft-side>div{
+    width: 200px;
+}

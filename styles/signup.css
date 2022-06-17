@@ -1,0 +1,19 @@
+body{
+    font-family: sans-serif;
+}
+#signdiv
+    {
+        height: 80%;
+        width: 60%;
+        /* border: 1px solid red; */
+        margin: auto;
+    }
+    #maindivvv
+    {
+        height: 80%;
+        width: 90%;
+        /* border: 1px solid teal; */
+        display: flex;
+        margin: auto;
+        margin-bottom: 100px;
+    }

@@ -1,0 +1,246 @@
+/* homepage1 */
+body{
+    font-family: sans-serif;
+}
+
+#crush{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: -5px;
+    margin-top: 50px;
+}
+#crush-para{
+    text-align: center;
+}
+#crush-main-div{
+    display: flex;
+    width: 90%;
+    height: 850px;
+    margin: auto;
+    justify-content: space-around;
+}
+#crush-image{
+    width: 600px;
+    height: 850px;
+    cursor: pointer;
+}
+#crush-prod{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+#crush-prod1{
+    text-align: center;
+    height: 400px;
+    cursor: pointer;
+}
+#crush-prod1-img{
+    width: 100px;
+    height: 120px;
+}
+#category{
+    font-weight: 400;
+}
+#notify{
+    height: 40px;
+    width: 200px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+#notify:hover{
+    background-color: rgb(46, 46, 46);
+}
+#creamy{
+    font-size: 20px;
+}
+#pink{
+    font-size: 12px;
+}
+#category{
+    font-size: 15px;
+}
+
+/* homepage2 */
+
+#btn-stick{
+    height: 35px;
+    width: 160px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+#btn-stick:hover{
+    color: white;
+    background-color: rgb(43, 42, 42);
+}
+#home-page2-img1{
+    width: 94%;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 70px;
+    margin-bottom: 260px;
+}
+#home-page2-img2{
+    width: 94%;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 250px;
+    cursor: pointer;
+}
+#home-page2-img3{
+    width: 94%;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 350px;
+    cursor: pointer;
+}
+#home-page2-img4{
+    width: 94%;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 230px;
+    cursor: pointer;
+}
+#on-img-btn{
+    height: 30px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+#on-img-btn:hover{
+    background-color: rgb(51, 50, 50);
+}
+#on-img-div{
+    margin-top: -550px;
+    width: 35%;
+   margin-left: 80px;
+}
+#on-img-div1{
+    margin-top: -750px;
+    width: 35%;
+   margin-left: 80px;
+}
+#img-head{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+}
+#img-head1{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+    color: white;
+}
+#img-para{
+    font-size: 20px;
+    line-height: 35px;
+}
+#img-para1{
+    font-size: 20px;
+    line-height: 35px;
+    color: white;
+}
+#home-bottom-div{
+    display: flex;
+    width: 94%;
+    margin-top: 350px;
+    margin-left: 20px;
+    background-color: black;
+    cursor: pointer;
+}
+#hbd-1-img{
+    width: 700px;
+    height: 600px;
+}
+#hbd-1{
+    margin-left: 50px;
+    
+}
+#hbd-1-head{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+    padding-top: 200px;
+    color: white;
+}
+#hbd-1-para{
+    font-size: 18px;
+    color: white;
+}
+#hbd-1-btn{
+    height: 30px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: white;
+    cursor: pointer;
+}
+#hbd-1-btn:hover{
+    color: white;
+    background-color: rgb(51, 51, 51);
+}
+
+/* homepage3 */
+
+#shop-head-now{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#home-page-3{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#home-page-head{
+    font-size: 50px;
+    font-weight: 500;
+}
+#explore{
+    width: 260px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+#explore:hover{
+    background-color: rgb(67, 67, 67);
+}
+#home-shop-now, #home-chat-now{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+#home-shop-now>div, #home-chat-now>div{
+    width: 300px;
+    height: 500px;
+    cursor: pointer;
+}
+#shop-image, #chat-img{
+    height: 300px;
+}
+#shopnow{
+    height: 30px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+#shopnow:hover{
+    background-color: rgb(53, 53, 53);
+}
+#chatnow{
+    color: black;
+    font-size: 12px;
+    text-decoration: underline;
+}
+#chatnow:hover{
+    color: red;
+}

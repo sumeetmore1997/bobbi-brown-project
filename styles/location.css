@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+}
+#location{
+    text-align: center;
+    margin: auto;
+    height: 200px;
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: #f4f1ec;
+    padding-top: 1px;
+}
+#current{
+    color: red;
+}
+#store{
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 10px;
+}
+#india{
+    height: 30px;
+}
+#city{
+    height: 25px;
+}
+#find-store{
+    height: 30px;
+    color: white;
+    background-color: red;
+    border: none;
+}

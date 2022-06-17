@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/new.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="whats">
+        <img id="whats-img" src="https://www.bobbibrown.in/media/export/cms/mpp/FY19/MPP-Category-Header-PC-Skincare_@2x.jpg" alt="">
+        <h2 id="whats-p">BESTSELLERS</h2>
+    </div>
+
+    <select name="" id="new-sort">
+        <option value="">SORT BY</option>
+        <option value="">BESTSELLERS</option>
+        <option value="">PRICE(LOW TO HIGH)</option>
+        <option value="">PRICE(HIGH TO LOW)</option>
+        <option value="">HIGHEST RATED</option>
+    </select>
+
+    <div id="container"></div>
+
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "./scripts/footer.js";
+    document.getElementById("footer").innerHTML = footer();
+
+    const url = "https://bobbi-brown-api.herokuapp.com/product"
+
+    let bagData= JSON.parse(localStorage.getItem("product")) || []
+
+async function getData(){
+    try{
+        let res = await fetch(url);
+
+    let products = await res.json();
+    append(products);
+    console.log(products);
+
+    }catch(err){
+        console.log(err);
+    }
+}
+
+getData();
+
+ function append(data){
+        let container = document.getElementById("container");
+        data.forEach(function(ele){
+            let div = document.createElement("div")
+            div.setAttribute("id","products")
+            console.log(ele)
+
+            let img = document.createElement("img");
+            img.src = ele.Image;
+    
+            let h2 = document.createElement("h2");
+            h2.innerText = ele.name;
+
+            let rating = document.createElement("p")
+            rating.innerText = "★★★☆☆(95)";
+    
+            let p = document.createElement("p");
+            p.innerText = ele.tag;
+
+            let price = document.createElement("p");
+            price.innerText = ele.price;
+
+            let btn = document.createElement("button")
+            btn.innerText = "ADD TO BAG";
+            btn.addEventListener("click", function(){
+                addToBag(ele)
+            })
+    
+            // let div = document.createElement("div");
+            div.append(img, h2, rating, p, price, btn);
+    
+            container.append(div);
+        });
+
+        function addToBag(ele){
+    console.log(ele)
+    bagData.push(ele);
+    localStorage.setItem("product",JSON.stringify(bagData));
+}
+    }
+</script>
